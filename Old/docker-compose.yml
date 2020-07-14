@@ -51,13 +51,7 @@ services:
       - "5000:5000/udp"
       - "9600:9600"
     environment:
-      LS_JAVA_OPTS:          "-Xmx256m -Xms256m"
-      ELK_VERSION:           "$ELK_VERSION"
-      SQL_SERVER_IP:         "$SQL_SERVER_IP"
-      MSSQL_PORT_CONNECTION: "$MSSQL_PORT_CONNECTION"
-      SQL_USER:              "$SQL_USER"
-      SQL_PASSWORD:          "$SQL_PASSWORD"
-      SQL_DB_NAME:           "$SQ_DB_NAME"
+      LS_JAVA_OPTS: "-Xmx256m -Xms256m"
     networks:
       - elk
     depends_on:
